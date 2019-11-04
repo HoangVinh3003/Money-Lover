@@ -1,0 +1,44 @@
+﻿<Window
+    x:Class="MoneyLover.Application.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    mc:Ignorable="d"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="13"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Background="#E25703"
+    Height="545" Width="320"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    WindowStartupLocation="CenterScreen"
+    MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "160" />
+            <RowDefinition Height = "200" />
+            <RowDefinition Height = "40" />
+            <RowDefinition Height = "70" />
+            <RowDefinition Height = "70" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnExit" HorizontalAlignment="Right" BorderBrush="#E25703" Background="#E25703" TextElement.Foreground="White" Width="50" Height="50" Margin="0,0,0.4,150" Click="btnExit_Click">X</Button>
+
+        <Image Grid.Row ="1" Source="../assets/logo.png"/>
+        <TextBlock Grid.Row ="2" Width="250" Text="Lên kế hoạch tài chính thông minh và từng bước tiết kiệm để hiện thực hóa ước mơ." TextElement.Foreground="White" TextElement.FontSize="10" TextAlignment="Center" FontFamily="Arial" TextWrapping="Wrap"/>
+        <Button x:Name="btnRegister" Grid.Row ="3" Height="50" Width="300" 
+                Content="LẦN ĐẦU SỬ DỤNG MONEY LOVER"
+                Background="White" 
+                TextElement.Foreground="DarkGreen"
+                Click="btnRegister_Click"/>
+        <Button x:Name="btnSignIn" Grid.Row ="4" Height="50" Width="300" 
+                Content="ĐÃ SỬ DỤNG MONEY LOVER" TextElement.Foreground="White" 
+                Background="#E25703" BorderBrush="White" Click="btnSignIn_Click"/>
+    </Grid>
+</Window>

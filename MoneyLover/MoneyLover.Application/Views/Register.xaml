@@ -1,0 +1,69 @@
+﻿<Window x:Class="MoneyLover.Application.Views.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyLover.Application"         
+        mc:Ignorable="d"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextElement.FontFamily="Arial"        
+        Background="LightGray"
+        Height="300" Width="319"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="320"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="Green"/>
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="320"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="#a9a9a9 "/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+                <RowDefinition Height = "*" />
+            </Grid.RowDefinitions>
+
+
+            <Button x:Name="btnClose" HorizontalAlignment="Right" BorderBrush="LightGray" Background="LightGray" TextElement.Foreground="Black" Width="23" Margin="0,0,0,8" Click="btnClose_Click">X</Button>
+            <TextBlock Grid.Row ="1" Text="Đăng ký bằng email"
+                       VerticalAlignment="Center" TextElement.Foreground="Black" 
+                       TextElement.FontSize="20" TextAlignment="Center" Margin="0,1,0,10"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="27,2,0,0"  Text="Email" VerticalAlignment="Top" Width="39" Height="13" Grid.Row="2" RenderTransformOrigin="-0.231,0.615" />
+            <TextBlock  HorizontalAlignment="Left" Margin="27,17,0,0"  Text="Password" VerticalAlignment="Top" Width="59" Grid.Row="3" RenderTransformOrigin="0.991,0.545"  />
+            <TextBox x:Name="txtEmail" Grid.Row ="2"  HorizontalAlignment="Left" Margin="110,2,0,0"  VerticalAlignment="Top" Width="182" Height="22"  />
+
+            <PasswordBox x:Name="psdPassword"  Grid.Row="3"  HorizontalAlignment="Left" Margin="110,11,0,0"  VerticalAlignment="Top" Width="182" Height="22"  />
+            <Button x:Name="btnRegister" Grid.Row ="5" Height="35" Content="ĐĂNG KÝ" Background="Green" 
+                    TextElement.Foreground="White" TextElement.FontSize="10" TextElement.FontWeight="Bold" Click="btnRegister_Click" Margin="27,0,27,31" Grid.RowSpan="2"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
